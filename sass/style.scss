@@ -1,18 +1,43 @@
 /* Variables */
 $text-light: #ffffff;
-$green: #08cf30;
-$grey: #686e66;
-$light-grey: #e6e6e6;
+$yellow: #d9c811;
+$text-dark: #000000;
+$beige: #f0ece4;
+$font-text: 'Arima Madurai', cursive;
+$font-brand: 'Leckerli One', cursive;
 
 /* Global */
 
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: $font-text;
+}
+
+.section-title {
+  font-size: 40px;
+  color: $text-dark;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-top: 55px;
+}
+
+.section-subtitle {
+  font-size: 20px;
+  font-style: italic;
+  text-align: center;
+  font-weight: lighter;
+  margin-top: -45px;
+}
 
 /* Top */
 
 .top {
   height: 80vh;
   position: relative;
-  background-image: url('https://images.pexels.com/photos/1744651/pexels-photo-1744651.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+  background-image: url('https://i.postimg.cc/wM7zZcM7/top-background.jpg');
   background-position: top;
   background-size: cover;
   background-attachment: fixed;
@@ -22,7 +47,12 @@ $light-grey: #e6e6e6;
 .navigation .container {
   display: flex;
   justify-content: space-around;
-  padding-top: 30px;
+  padding: 30px 0;
+
+    .brand {
+      color: $yellow;
+      font-family: $font-brand;
+    }
 }
 
 .menu ul li {
@@ -47,10 +77,124 @@ $light-grey: #e6e6e6;
     .page-title {
       font-size: 45px;
       font-style: italic;
+
     }
 
     .page-subtitle {
-      font-size: 55px;
+      font-size: 65px;
       text-transform: uppercase;
+      font-weight: 900;
+
     }
+
+    .btn {
+      text-decoration: none;
+      background-color: $yellow;
+      color: $text-light;
+      padding: 20px 55px;
+      font-size: 20px;
+      text-transform: uppercase;
+      border-radius: 5%;
+      height: 100px;
+      font-weight: bolder;
+    }
+}
+
+/* Services */
+
+.services {
+  background-color: $text-light;
+}
+
+.services-inner {
+  display: flex;
+  padding: 35px 220px;
+  text-align: center;
+  margin: 0 auto;
+
+    .services-item {
+        padding: 0 35px;
+
+      i {
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
+        color: $yellow;
+        border-radius: 50%;
+        padding: 15px 10px;
+        border: 2px solid $yellow;
+      }
+    }
+}
+
+
+
+/* Portfolio */
+
+.portfolio {
+    width: 100%;
+    background: $beige;
+    margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 100px;
+
+    .portfolio-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 55px 150px;
+
+    .portfolio-item {
+          flex: 0 0 25%;
+          background: $text-light;
+          margin: 20px;
+
+          img {
+            object-fit: cover;
+            height: 200px;
+            width: 100%;
+            }
+
+          .portfolio-text {
+            background-color: $text-light;
+            width: 100%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+/* Footer */
+
+footer {
+  display: flex;
+  padding: 25px 220px;
+  text-align: center;
+
+  .footer-text {
+    flex: 1 0 0;
+  }
+
+  .footer-icons {
+    flex: 2 0 0;
+  }
+
+    ul li {
+      display: inline;
+      list-style-type: none;
+
+    a {
+      font-size: 0;
+    }
+
+    i {
+      font-size: 30px;
+      background: $text-dark;
+      width: 60px;
+      height: 60px;
+      color: $text-light;
+      border-radius: 50%;
+      padding: 15px 10px;
+    }
+  }
 }
