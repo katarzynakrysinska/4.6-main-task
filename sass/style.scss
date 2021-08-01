@@ -128,44 +128,60 @@ body {
 /* Portfolio */
 
 .portfolio {
-    width: 100%;
-    background: $beige;
-    margin: 0 auto;
-    padding-top: 55px;
-    padding-bottom: 100px;
+  background-color: $beige;
+}
 
-    .portfolio-inner {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          padding: 35px 150px;
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
 
-    .portfolio-item {
-          flex: 0 0 25%;
-          background: $text-light;
-          margin: 20px;
+}
 
-          img {
-            object-fit: cover;
-            height: 200px;
-            width: 100%;
+.portfolio-box {
+    flex: 0 0 33.333333%;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 300px;
+    padding: 0 0 96px 0;
+
+
+    .portfolio-image {
+
+        max-width: 250px;
+        height: 100%;
+        position: relative;
+        padding: 5px;
+
+           img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              margin-bottom: -10px;
             }
 
-          .portfolio-text {
-            background-color: $text-light;
-            width: 100%;
+          h3, p {
+
+            max-width: 250px;
+            position: relative;
+            margin: 0 auto;
             text-align: center;
+            background-color: $text-light;
+            padding-top: 0;
           }
-        }
-      }
+
     }
+
+}
 
 /* Footer */
 
 footer {
   display: flex;
-  padding: 25px 220px;
+  padding: 25px;
   text-align: center;
+  background-color: $text-light;
 
   .footer-text {
     flex: 1 0 0;
@@ -175,7 +191,7 @@ footer {
     flex: 2 0 0;
   }
 
-    ul li {
+  ul li {
       display: inline;
       list-style-type: none;
 
@@ -201,15 +217,28 @@ footer {
 
   .services-inner {
     flex-direction: column;
-    padding: 35px 100px;
+    align-items: center;
+    padding: 35px 15px;
   }
 
-  .portfolio-inner {
-    flex-direction: column;
-  }
+  .boxes {
+         flex-direction: column;
+         align-items: center;
+         padding-bottom: 25px;
+     }
+
+  .portfolio-box {
+         max-width: 100%;
+         height: 150px;
+         flex-direction: column;
+         padding-top: 30px;
+         justify-content: center;
+
+     }
 
   footer {
     flex-direction: column;
+    align-items: center;
 
       .footer-text {
         font-size: 15px;
@@ -217,7 +246,7 @@ footer {
 
       ul li i {
         font-size: 25px;
-        width: 40px;
+        width: 50%;
         height: 40px;
         padding: 7px 7px;
       }
@@ -235,14 +264,27 @@ footer {
 
   .menu {
       margin: 0 auto;
+      padding-bottom: 15px;
 
     ul li {
         text-align: center;
+
+        a {
+          font-size: 13px;
+          text-align: center;
+        }
       }
     }
 
   .splash-inner .title {
-    padding-top: 35px;
+    padding-top: 150px;
+
+    .btn {
+      padding: 20px;
+      font-size: 10px;
+      height: 50px;
+      font-weight: bolder;
+    }
 
     .page-title {
       font-size: 30px;
@@ -250,7 +292,7 @@ footer {
 
     .page-subtitle {
       padding-top: 35px;
-      padding-bottom: 35px;
+      padding-bottom: 10px;
       font-size: 35px;
     }
   }
@@ -258,5 +300,7 @@ footer {
 .section-title {
   padding-top: 35px;
 }
+
+
 
 }
